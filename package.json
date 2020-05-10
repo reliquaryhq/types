@@ -11,6 +11,8 @@
   "main": "src/index.ts",
   "scripts": {
     "lint": "eslint . --ext .js,.mjs,.ts",
+    "prepublishOnly": "npm run lint",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -22,6 +24,7 @@
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
     "prettier": "2.0.5",
+    "standard-version": "8.0.0",
     "typescript": "3.8.3"
   }
 }
