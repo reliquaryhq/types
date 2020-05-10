@@ -9,6 +9,9 @@
     "reliquary"
   ],
   "main": "src/index.ts",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "lint": "eslint . --ext .js,.mjs,.ts",
     "prepublishOnly": "npm run lint",
