@@ -1,5 +1,5 @@
 type CdromDescription = {
-  id?: number;
+  id: number;
   cdromId?: number;
   cdromSubmissionId?: number;
   discIndex?: number;
@@ -17,8 +17,10 @@ type CdromDescription = {
   updatedAt?: number;
 };
 
+type NewCdromDescription = Omit<CdromDescription, 'id'>;
+
 type CdromDump = {
-  id?: number;
+  id: number;
   cdromId?: number;
   cdromSubmissionId?: number;
   copyProtectionId?: number;
@@ -33,8 +35,10 @@ type CdromDump = {
   updatedAt?: number;
 };
 
+type NewCdromDump = Omit<CdromDump, 'id'>;
+
 type CdromSubmission = {
-  id?: number;
+  id: number;
   cdromId?: number;
   sourceId?: number;
   submissionStateId?: number;
@@ -43,12 +47,14 @@ type CdromSubmission = {
   updatedAt?: number;
 };
 
+type NewCdromSubmission = Omit<CdromSubmission, 'id'>;
+
 type Session = {
   userId?: number;
 };
 
 type User = {
-  id?: number;
+  id: number;
   name?: string;
   passwordHash?: string;
   passwordSalt?: string;
@@ -57,4 +63,16 @@ type User = {
   updatedAt?: number;
 };
 
-export { CdromDescription, CdromDump, CdromSubmission, Session, User };
+type NewUser = Omit<User, 'id'>;
+
+export {
+  CdromDescription,
+  CdromDump,
+  CdromSubmission,
+  NewCdromDescription,
+  NewCdromDump,
+  NewCdromSubmission,
+  NewUser,
+  Session,
+  User,
+};
