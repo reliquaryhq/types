@@ -53,6 +53,17 @@ type Session = {
   userId?: number;
 };
 
+type Source = {
+  id: number;
+  userId?: number;
+  name?: string;
+  notes?: string;
+  createdAt?: number;
+  updatedAt?: number;
+};
+
+type NewSource = Omit<Source, 'id'>;
+
 type User = {
   id: number;
   name?: string;
@@ -74,5 +85,7 @@ export {
   NewCdromSubmission,
   NewUser,
   Session,
+  Source,
+  NewSource,
   User,
 };
